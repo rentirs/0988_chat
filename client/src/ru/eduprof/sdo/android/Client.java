@@ -1,4 +1,4 @@
-package ru.eduprof.sdo.android.client;
+package ru.eduprof.sdo.android;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
