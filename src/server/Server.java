@@ -61,6 +61,7 @@ public class Server {
 
     private static void msgHandler(User currentUser, String msg) throws IOException {
         for (User user : users) {
+            if(users.indexOf(user) == users.indexOf(currentUser)) continue;
             DataOutputStream out1 = new DataOutputStream(user.getSocket().getOutputStream());
             out1.writeUTF(currentUser.getUserName() + msg);
         }
