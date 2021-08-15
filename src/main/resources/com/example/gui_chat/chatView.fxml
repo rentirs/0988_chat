@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" prefHeight="500.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gui_chat.ChatController">
+    <TextArea fx:id="textArea" editable="false" focusTraversable="false" VBox.vgrow="ALWAYS">
+      <VBox.margin>
+         <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+      </VBox.margin></TextArea>
+    <HBox spacing="2.0">
+        <TextField fx:id="textField" editable="false" focusTraversable="false" onAction="#send" HBox.hgrow="ALWAYS">
+        </TextField>
+        <Button fx:id="btnSend" disable="true" onAction="#send" style="-fx-background-color: lightblue;" text="Отправить">
+         <effect>
+            <Glow />
+         </effect></Button>
+      <padding>
+         <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+      </padding>
+    </HBox>
+    <Button fx:id="btnConnect" maxWidth="1.7976931348623157E308" onAction="#connect" style="-fx-background-color: lightgreen;" text="Подключиться">
+      <effect>
+         <Glow level="0.25">
+            <input>
+               <Lighting>
+                  <bumpInput>
+                     <Shadow />
+                  </bumpInput>
+                  <light>
+                     <Light.Distant />
+                  </light>
+               </Lighting>
+            </input>
+         </Glow>
+      </effect>
+      <font>
+         <Font name="Arial Bold" size="12.0" />
+      </font>
+      <opaqueInsets>
+         <Insets />
+      </opaqueInsets>
+      <VBox.margin>
+         <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+      </VBox.margin></Button>
+</VBox>
